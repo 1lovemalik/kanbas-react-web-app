@@ -151,30 +151,51 @@ export default function Lab1() {
           <h5>File upload</h5>
           <input id="wd-upload" type="file" />
         </section>
-          </div>
-          <div>
-              <input type="radio" name="NAME1"
-        value="OPTION1"/>
+      </div>
+      <div>
         <input type="radio" name="NAME1"
-                  value="OPTION2" />
-          </div>
-          <div>
-              <h5 id="wd-radio-buttons">Radio buttons</h5>
+          value="OPTION1" />
+        <input type="radio" name="NAME1"
+          value="OPTION2" />
+      </div>
+      <div>
+        <h5 id="wd-radio-buttons">Radio buttons</h5>
 
-<label>Favorite movie genre:</label><br />
+        <label>Favorite movie genre:</label><br />
 
-<input type="radio" name="radio-genre" id="wd-radio-comedy"/>
-<label htmlFor="wd-radio-comedy">Comedy</label><br />
+        <input type="radio" name="radio-genre" id="wd-radio-comedy" />
+        <label htmlFor="wd-radio-comedy">Comedy</label><br />
 
-<input type="radio" name="radio-genre" id="wd-radio-drama"/>
-<label htmlFor="wd-radio-drama">Drama</label><br />
+        <input type="radio" name="radio-genre" id="wd-radio-drama" />
+        <label htmlFor="wd-radio-drama">Drama</label><br />
 
-<input type="radio" name="radio-genre" id="wd-radio-scifi"/>
-<label htmlFor="wd-radio-scifi">Science Fiction</label><br />
+        <input type="radio" name="radio-genre" id="wd-radio-scifi" />
+        <label htmlFor="wd-radio-scifi">Science Fiction</label><br />
 
-<input type="radio" name="radio-genre" id="wd-radio-fantasy"/>
-<label htmlFor="wd-radio-fantasy">Fantasy</label>
-          </div>
+        <input type="radio" name="radio-genre" id="wd-radio-fantasy" />
+        <label htmlFor="wd-radio-fantasy">Fantasy</label>
+      </div>
+
+      <div>
+        <label> Pick 3 numbers from the list. </label>
+        <input type="checkbox" name="NAME2"
+          value="OPTION1" />
+        <input type="checkbox" name="NAME2"
+          value="1" />
+        <input type="checkbox" name="NAME2"
+          value="OPTION3" />
+      </div>
+
+      <div>
+        Please
+
+        <a id="wd-lipsum" href="https://www.lipsum.com"> click here </a>
+        to get dummy text<br />
+
+
+        <a id="wd-lipsum" href="https://github.com/1lovemalik/kanbas-react-web-app"> Code Repository </a>
+        on Github
+      </div >
     </>
   );
 }
