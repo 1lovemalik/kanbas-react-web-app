@@ -50,8 +50,8 @@ export default function Lab1() {
           </ol>
 
           <h5>My favorite recipe</h5>
+          <p>How to make steak!</p>
           <ol id="wd-steak">
-            <p>How to make steak!</p>
             <li>Pick out your favorite type of Steak - I like New York Strip!</li>
             <li>Salt your steak!</li>
             <li>Get your pan ripping hot. Preferably stainless steel or cast iron.</li>
@@ -73,7 +73,7 @@ export default function Lab1() {
 
         <section id="wd-tables">
           <h4>Table Tag</h4>
-          <table border={1} width="100%">
+          <table border={1} style={{ width: "100%" }}>
             <thead>
               <tr>
                 <th>Quiz</th>
@@ -114,9 +114,9 @@ export default function Lab1() {
         <section id="wd-images">
           <h4>Image Tag</h4>
           <p>Loading an image from the internet:</p>
-          <img id="wd-starship" width="400px" src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg" alt="Starship" />
+          <img id="wd-starship" width="400" src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg" alt="Starship" />
           <p>Loading a local image:</p>
-          <img id="wd-teslabot" src="Downloads/teslabot.jpg" height="200px" alt="Teslabot" />
+          <img id="wd-teslabot" src="Downloads/teslabot.jpg" height="200" alt="Teslabot" />
         </section>
 
         <section id="wd-forms">
@@ -124,7 +124,7 @@ export default function Lab1() {
           <form id="wd-text-fields">
             <h5>Text Fields</h5>
             <label htmlFor="wd-text-fields-username">Username:</label>
-            <input id="wd-text-fields-username" placeholder="jdoe" /> <br />
+            <input id="wd-text-fields-username" placeholder="jdoe" type="text" /> <br />
             <label htmlFor="wd-text-fields-password">Password:</label>
             <input type="password" id="wd-text-fields-password" /> <br />
             <label htmlFor="wd-text-fields-first-name">First name:</label>
@@ -153,49 +153,43 @@ export default function Lab1() {
         </section>
       </div>
       <div>
-        <input type="radio" name="NAME1"
-          value="OPTION1" />
-        <input type="radio" name="NAME1"
-          value="OPTION2" />
+        <input type="radio" name="NAME1" value="OPTION1" />
+        <input type="radio" name="NAME1" value="OPTION2" />
       </div>
       <div>
         <h5 id="wd-radio-buttons">Radio buttons</h5>
 
         <label>Favorite movie genre:</label><br />
 
-        <input type="radio" name="radio-genre" id="wd-radio-comedy" />
+        <input type="radio" name="radio-genre" id="wd-radio-comedy" value="comedy" />
         <label htmlFor="wd-radio-comedy">Comedy</label><br />
 
-        <input type="radio" name="radio-genre" id="wd-radio-drama" />
+        <input type="radio" name="radio-genre" id="wd-radio-drama" value="drama" />
         <label htmlFor="wd-radio-drama">Drama</label><br />
 
-        <input type="radio" name="radio-genre" id="wd-radio-scifi" />
+        <input type="radio" name="radio-genre" id="wd-radio-scifi" value="scifi" />
         <label htmlFor="wd-radio-scifi">Science Fiction</label><br />
 
-        <input type="radio" name="radio-genre" id="wd-radio-fantasy" />
+        <input type="radio" name="radio-genre" id="wd-radio-fantasy" value="fantasy" />
         <label htmlFor="wd-radio-fantasy">Fantasy</label>
       </div>
 
       <div>
         <label> Pick 3 numbers from the list. </label>
-        <input type="checkbox" name="NAME2"
-          value="OPTION1" />
-        <input type="checkbox" name="NAME2"
-          value="1" />
-        <input type="checkbox" name="NAME2"
-          value="OPTION3" />
+        <input type="checkbox" name="NAME2" value="OPTION1" />
+        <input type="checkbox" name="NAME2" value="1" />
+        <input type="checkbox" name="NAME2" value="OPTION3" />
       </div>
 
       <div>
         Please
 
-        <a id="wd-lipsum" href="https://www.lipsum.com"> click here </a>
+        <a id="wd-lipsum-1" href="https://www.lipsum.com"> click here </a>
         to get dummy text<br />
 
-
-        <a id="wd-lipsum" href="https://github.com/1lovemalik/kanbas-react-web-app"> Code Repository </a>
+        <a id="wd-lipsum-2" href="https://github.com/1lovemalik/kanbas-react-web-app"> Code Repository </a>
         on Github
-      </div >
+      </div>
     </>
   );
 }
