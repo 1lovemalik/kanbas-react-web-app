@@ -10,7 +10,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<Navigate to="Kanbas" />} />
           <Route path="/Labs/*" element={<Lab />} />
-          <Route path="/Kanbas/*" element={<Kanbas />} /> 
+          <Route path="/Kanbas/*" element={<Kanbas />} />
         </Routes>
       </div>
     </HashRouter>
