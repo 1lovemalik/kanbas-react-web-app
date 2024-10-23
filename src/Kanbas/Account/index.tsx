@@ -7,6 +7,8 @@ import AccountNavigation from "./Navigation.tsx";
 export default function Account() {
   return (
     <div id="wd-account-screen">
+      <h1>Name: Ahamed Malik Diallo</h1>
+      <h5>Link to GitHub: <a href="https://github.com/1lovemalik/kanbas-react-web-app" > Here </a></h5>
       <table>
         <tr>
           <td valign="top">
