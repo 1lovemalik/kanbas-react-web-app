@@ -19,7 +19,6 @@ export default function Courses() {
                     <CoursesNavigation/>
                 </div>
                 <div className="flex-fill">
-
                     <Routes>
                         <Route path="/"
                                element={<Navigate to="Home"/>}/>
@@ -33,6 +32,5 @@ export default function Courses() {
                     </Routes>
                 </div>
             </div>
-
         </div>);
 }

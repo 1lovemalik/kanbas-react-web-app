@@ -8,9 +8,10 @@ import {BiBookmark} from "react-icons/bi";
 
 
 export default function KanbasNavigation() {
-    return (<div id="wd-kanbas-navigation" style={{width: 80}}
-                 className="list-group rounded-0 position-fixed
-         bottom-0 top-0 d-none d-md-block bg-black z-2">
+    return (
+        <div id="wd-kanbas-navigation" style={{width: 100}}
+                 className="list-group rounded-0  bottom-0 top-0 d-none d-md-block bg-black z-2">
+
         <a id="wd-neu-link" target="_blank"
            href="https://www.northeastern.edu/"
            className="list-group-item bg-black border-0 text-center">
@@ -46,26 +47,15 @@ export default function KanbasNavigation() {
               className="list-group-item text-white
               bg-black text-center border-0">
 
-            <FiMail className="fs-1 text-danger"/>
+            <FiMail className="fs-1 text-danger"/><br/>
             Mail
         </Link> <br/>
         <Link to="/Labs" id="wd-labs-link"
               className="list-group-item text-white
               bg-black text-center border-0">
-            <BiBookmark className="fs-1 text-danger"/>
+            <BiBookmark className="fs-1 text-danger"/> <br/>
             Labs
         </Link> <br/>
-    </div>);
+    </div>
+    );
 }
-
-/**
- *         <div id="wd-kanbas-navigation">
- *             <a href="https://www.northeastern.edu/" id="wd-neu-link" target="_blank">Northeastern</a><br />
- *             <Link to="/Kanbas/Account" id="wd-account-link">Account</Link><br />
- *             <Link to="/Kanbas/Dashboard" id="wd-dashboard-link">Dashboard</Link><br />
- *             <Link to="/Kanbas/Dashboard" id="wd-course-link">Courses</Link><br />
- *             <Link to="/Kanbas/Calendar" id="wd-calendar-link">Calendar</Link><br />
- *             <Link to="/Kanbas/Inbox" id="wd-inbox-link">Inbox</Link><br />
- *             <Link to="/Labs" id="wd-labs-link">Labs</Link><br />
- *         </div>
- */
