@@ -1,53 +1,46 @@
 import { MdDoNotDisturbAlt } from "react-icons/md";
+import { IoIosNotifications } from "react-icons/io";
+import { TbDeviceAnalytics } from "react-icons/tb";
+import { BiMicrophone } from "react-icons/bi";
+import { MdOutlineContactPage } from "react-icons/md";
+import { BiHome } from "react-icons/bi";
 import { FaCheckCircle } from "react-icons/fa";
 import { BiImport } from "react-icons/bi";
 import { LiaFileImportSolid } from "react-icons/lia";
-{/* Find more icons */}
+
 export default function CourseStatus() {
     return (
-        <div id="wd-course-status" style={{ width: "300px" }}>
-            <h2>Course Status</h2>
-            <div className="d-flex">
-                <div className="w-50 pe-1">
-                    <button className="btn btn-lg btn-secondary w-100 text-nowrap ">
-                        <MdDoNotDisturbAlt className="me-2 fs-5" /> Unpublish </button>
-                </div>
-                <div className="w-50">
-                    <button className="btn btn-lg btn-success w-100">
-                        <FaCheckCircle className="me-2 fs-5" /> Publish </button>
-                </div>
-            </div><br />
-            <button className="btn btn-lg btn-secondary w-100 mt-1 text-start">
-                <BiImport className="me-2 fs-5" /> Import Existing Content </button>
-            <button className="btn btn-lg btn-secondary w-100 mt-1 text-start">
-                <LiaFileImportSolid className="me-2 fs-5" /> Import from Commons </button>
-
-            {/* Complete the rest of the buttons */}
+        <div id="wd-course-status" style={{ width: "200px", fontSize: "0.875rem" }}>
+            <h3 style={{ fontSize: "1rem", marginBottom: "1rem" }}>Course Status</h3>
+            <div className="d-flex mb-2">
+                <button className="btn btn-sm btn-secondary w-50 me-1 text-nowrap">
+                    <MdDoNotDisturbAlt className="me-1" /> Unpublish
+                </button>
+                <button className="btn btn-sm btn-success w-50 text-nowrap">
+                    <FaCheckCircle className="me-1" /> Publish
+                </button>
+            </div>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <BiImport className="me-1" /> Import Content
+            </button>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <LiaFileImportSolid className="me-1" /> From Commons
+            </button>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <BiHome className="me-1" /> Home Screen
+            </button>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <MdOutlineContactPage className="me-1" /> Course Stream
+            </button>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <BiMicrophone className="me-1" /> Announcements
+            </button>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <TbDeviceAnalytics className="me-1" /> Analytics
+            </button>
+            <button className="btn btn-sm btn-secondary w-100 mb-1 text-start">
+                <IoIosNotifications className="me-1" /> Notifications
+            </button>
         </div>
-    );}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- *
- <button>Choose Home Screen</button>
- <button>View Course Stream </button>
- <button>View Announcement</button>
- <button>New Analytics</button>
- <button>View Course Notifications</button>
- </div>
- );
- }
- */
-
+    );
+}

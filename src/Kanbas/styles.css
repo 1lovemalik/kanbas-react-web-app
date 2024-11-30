@@ -12,6 +12,7 @@ body * {  font-family: Arial, Helvetica, sans-serif;  }
     padding-left: 140px;
 }
 
+
 .list-group.wd > .list-group-item.active {
     color: black;
     background-color: white;
@@ -42,5 +43,15 @@ body * {  font-family: Arial, Helvetica, sans-serif;  }
 
 .wd-view-progress {
     margin-left: 3px !important;
+}
+
+.wd-assignment-list-item {
+    padding: 12px !important;
+    background-color: #f9f9f9;
+    border: 1px solid gray !important;
+}
+
+.wd-assignment-list-item {
+    border-left: 3px solid green !important;
 }
 

@@ -1,18 +1,43 @@
 import { Link } from "react-router-dom";
 
 export default function Signin() {
-  return (
-    <div id="wd-signin-screen">
-      <h3>Sign in</h3>
-      <input className="wd-username" placeholder="username" /> <br />
-      <input className="wd-password" placeholder="password" type="password" /> <br />
-      <Link id="wd-signin-btn" to="/Kanbas/Dashboard">
-        Sign in
-      </Link>
-      <br />
-      <Link id="wd-signup-link" to="/Kanbas/Account/Signup">
-        Sign up
-      </Link>
-    </div>
-  );
+    return (
+        <div id="wd-signin-screen" className="d-flex justify-content-center align-items-center vh-100">
+            <div className="card p-4 shadow-sm" style={{ width: "300px" }}>
+                <h3 className="text-center mb-4">Sign In</h3>
+                <form>
+                    <div className="mb-3">
+                        <input
+                            type="text"
+                            id="wd-username"
+                            className="form-control"
+                            placeholder="Username"
+                        />
+                    </div>
+
+                    <div className="mb-3">
+                        <input
+                            type="password"
+                            id="wd-password"
+                            className="form-control"
+                            placeholder="Password"
+                        />
+                    </div>
+                    <Link
+                        id="wd-signin-btn"
+                        to="/Kanbas/Dashboard"
+                        className="btn btn-primary w-100 mb-2"
+                    >
+                        Sign In
+                    </Link>
+
+                    <div className="text-center">
+                        <Link id="wd-signup-link" to="/Kanbas/Account/Signup" className="text-secondary">
+                            Sign in
+                        </Link>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
 }

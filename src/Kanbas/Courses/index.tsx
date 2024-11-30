@@ -5,8 +5,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import {Navigate, Route, Routes} from "react-router";
 import {FaAlignJustify} from "react-icons/fa";
-import {PeopleTable} from "./People/Table.tsx"; 
-
+import PeopleTable from "./People/Table.tsx";
 
 export default function Courses() {
     return (
