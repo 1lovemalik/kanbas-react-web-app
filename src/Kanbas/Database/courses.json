@@ -1,0 +1,112 @@
+[
+  {
+    "_id": "1234",
+    "name": "CS1234 React JS",
+    "number": "CS1234",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Full Stack software developer",
+    "image": "/images/FullStackIMG.png"
+  },
+  {
+    "_id": "2345",
+    "name": "CS2345 Databases",
+    "number": "CS2345",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Database Design Using SQL",
+    "image": "/images/Databases.png"
+  },
+  {
+    "_id": "3456",
+    "name": "CS3456 Machine Learning",
+    "number": "CS3456",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Artificial Intelligence",
+    "credits": 4,
+    "description": "Intro to Machine Learning",
+    "image": "/images/MachineLearning.jpg"
+  },
+  {
+    "_id": "4567",
+    "name": "CS4567 Compilers",
+    "number": "CS4567",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Compiler Design",
+    "image": "/images/Compiler%20Design.jpg"
+  },
+  {
+    "_id": "5678",
+    "name": "CS5678 Mobile App Dev",
+    "number": "CS5678",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Software Engineering",
+    "credits": 3,
+    "description": "IOS Mobile App Development",
+    "image": "/images/SwiftDev.jpg"
+  },
+  {
+    "_id": "6789",
+    "name": "CS6789 Game Engines",
+    "number": "CS6789",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Game Development",
+    "credits": 4,
+    "description": "Building Game Engines",
+    "image": "/images/GameEng.jpg"
+  },
+  {
+    "_id": "7890",
+    "name": "CS7890 Software Dev",
+    "number": "CS7890",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Software Engineering",
+    "credits": 4,
+    "description": "Building Scalable Programs",
+    "image": "/images/SoftwareDev.jpg"
+  },
+  {
+    "_id": "8910",
+    "name": "Introduction to Psychology",
+    "number": "PSY101",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Psychology",
+    "credits": 3,
+    "description": "Exploring the Human Mind",
+    "image": "/images/Psychology.jpg"
+  },
+  {
+    "_id": "9911",
+    "name": "Introduction to Music Theory",
+    "number": "MUS101",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Music",
+    "credits": 3,
+    "description": "Foundations of Music Theory",
+    "image": "/images/MusicTheory.jpg"
+  },
+  {
+    "_id": "1101",
+    "name": "World History: Ancient Civilizations",
+    "number": "HIS101",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "History",
+    "credits": 3,
+    "description": "Exploring The Development of Ancient Civilizations",
+    "image": "/images/AncientCivilizations.jpg"
+  }
+]

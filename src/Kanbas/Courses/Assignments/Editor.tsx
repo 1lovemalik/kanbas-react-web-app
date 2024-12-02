@@ -1,8 +1,16 @@
-export default function EditAssignment() {
-    return (
-        <div className="container mt-4">
-            <h3 className="mb-4">Create Assignment</h3>
+import {Link, useParams} from "react-router-dom";
+import * as db from "../../Database";
 
+export default function EditAssignment() {
+    const {cid, aid} = useParams();
+    const assignment = db.assignments.find((assignment) => assignment._id === aid);
+
+    if (!assignment) {
+        return <div className="container mt-4">Assignment not found.</div>;
+    }
+
+    return (<div className="container mt-4">
+            <h3 className="mb-4">Edit Assignment</h3>
             <form>
                 <div className="mb-3 row">
                     <label htmlFor="assignmentName" className="col-sm-2 col-form-label fw-bold">
@@ -13,6 +21,7 @@ export default function EditAssignment() {
                             type="text"
                             className="form-control"
                             id="assignmentName"
+                            defaultValue={assignment.title}
                             placeholder="Enter assignment name"
                         />
                     </div>
@@ -98,14 +107,19 @@ export default function EditAssignment() {
                 </div>
 
                 <div className="mt-4 text-end">
-                    <button type="button" className="btn btn-secondary me-2">
+                    <Link
+                        to={`/Kanbas/Courses/${cid}/Assignments`}
+                        className="btn btn-secondary me-2"
+                    >
                         Cancel
-                    </button>
-                    <button type="submit" className="btn bg-danger">
+                    </Link>
+                    <Link
+                        to={`/Kanbas/Courses/${cid}/Assignments`}
+                        className="btn btn-danger"
+                    >
                         Save Assignment
-                    </button>
+                    </Link>
                 </div>
             </form>
-        </div>
-    );
+        </div>);
 }

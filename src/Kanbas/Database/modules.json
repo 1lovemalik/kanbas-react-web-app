@@ -1,0 +1,202 @@
+[
+  {
+    "_id": "M1234",
+    "name": "Introduction to React",
+    "description": "Learn the basics of React.",
+    "course": "1234",
+    "lessons": [
+      {
+        "_id": "L1234-1",
+        "name": "React Basics",
+        "description": "Introduction to React library.",
+        "module": "M1234"
+      },
+      {
+        "_id": "L1234-2",
+        "name": "JSX and Components",
+        "description": "Learn JSX and components.",
+        "module": "M1234"
+      }
+    ]
+  },
+  {
+    "_id": "M2345",
+    "name": "Introduction to Databases",
+    "description": "Learn database fundamentals.",
+    "course": "2345",
+    "lessons": [
+      {
+        "_id": "L2345-1",
+        "name": "Relational Databases",
+        "description": "Overview of relational databases.",
+        "module": "M2345"
+      },
+      {
+        "_id": "L2345-2",
+        "name": "SQL Basics",
+        "description": "Introduction to SQL queries.",
+        "module": "M2345"
+      }
+    ]
+  },
+  {
+    "_id": "M3456",
+    "name": "Machine Learning Basics",
+    "description": "Learn the basics of ML.",
+    "course": "3456",
+    "lessons": [
+      {
+        "_id": "L3456-1",
+        "name": "Supervised Learning",
+        "description": "Introduction to supervised learning.",
+        "module": "M3456"
+      },
+      {
+        "_id": "L3456-2",
+        "name": "Unsupervised Learning",
+        "description": "Explore unsupervised learning.",
+        "module": "M3456"
+      }
+    ]
+  },
+  {
+    "_id": "M4567",
+    "name": "Compiler Design Principles",
+    "description": "Learn principles of compilers.",
+    "course": "4567",
+    "lessons": [
+      {
+        "_id": "L4567-1",
+        "name": "Lexical Analysis",
+        "description": "Learn lexical analysis techniques.",
+        "module": "M4567"
+      },
+      {
+        "_id": "L4567-2",
+        "name": "Parsing Techniques",
+        "description": "Overview of parsing methods.",
+        "module": "M4567"
+      }
+    ]
+  },
+  {
+    "_id": "M5678",
+    "name": "Mobile App Development",
+    "description": "Introduction to app dev.",
+    "course": "5678",
+    "lessons": [
+      {
+        "_id": "L5678-1",
+        "name": "Swift Basics",
+        "description": "Learn the basics of Swift.",
+        "module": "M5678"
+      },
+      {
+        "_id": "L5678-2",
+        "name": "UI Design in Swift",
+        "description": "Explore UI design techniques.",
+        "module": "M5678"
+      }
+    ]
+  },
+  {
+    "_id": "M6789",
+    "name": "Game Engine Basics",
+    "description": "Introduction to game engines.",
+    "course": "6789",
+    "lessons": [
+      {
+        "_id": "L6789-1",
+        "name": "Physics Engines",
+        "description": "Learn about physics engines.",
+        "module": "M6789"
+      },
+      {
+        "_id": "L6789-2",
+        "name": "Rendering Techniques",
+        "description": "Explore rendering techniques.",
+        "module": "M6789"
+      }
+    ]
+  },
+  {
+    "_id": "M7890",
+    "name": "Software Development",
+    "description": "Learn scalable dev.",
+    "course": "7890",
+    "lessons": [
+      {
+        "_id": "L7890-1",
+        "name": "Agile Methodology",
+        "description": "Introduction to Agile.",
+        "module": "M7890"
+      },
+      {
+        "_id": "L7890-2",
+        "name": "Design Patterns",
+        "description": "Overview of design patterns.",
+        "module": "M7890"
+      }
+    ]
+  },
+  {
+    "_id": "M8910",
+    "name": "Psychology Fundamentals",
+    "description": "Intro to psychology.",
+    "course": "8910",
+    "lessons": [
+      {
+        "_id": "L8910-1",
+        "name": "Cognitive Psychology",
+        "description": "Basics of cognitive psych.",
+        "module": "M8910"
+      },
+      {
+        "_id": "L8910-2",
+        "name": "Behavioral Studies",
+        "description": "Introduction to behavior.",
+        "module": "M8910"
+      }
+    ]
+  },
+  {
+    "_id": "M9911",
+    "name": "Music Theory Basics",
+    "description": "Learn music theory.",
+    "course": "9911",
+    "lessons": [
+      {
+        "_id": "L9911-1",
+        "name": "Scales and Chords",
+        "description": "Learn scales and chords.",
+        "module": "M9911"
+      },
+      {
+        "_id": "L9911-2",
+        "name": "Harmonic Analysis",
+        "description": "Introduction to harmony.",
+        "module": "M9911"
+      }
+    ]
+  },
+  {
+    "_id": "M1101",
+    "name": "Ancient Civilizations",
+    "description": "Study ancient societies.",
+    "course": "1101",
+    "lessons": [
+      {
+        "_id": "L1101-1",
+        "name": "Mesopotamia",
+        "description": "Explore Mesopotamian culture.",
+        "module": "M1101"
+      },
+      {
+        "_id": "L1101-2",
+        "name": "Ancient Egypt",
+        "description": "Study ancient Egyptian life.",
+        "module": "M1101"
+      }
+    ]
+  }
+]
