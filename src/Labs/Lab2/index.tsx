@@ -1,16 +1,16 @@
 import "./index.css";
-import {ForegroundColors} from "./ForegroundColors.tsx";
-import {BackgroundColors} from "./BackgroundColors.tsx";
-import {Borders} from "./Borders.tsx";
-import {Padding} from "./Padding.tsx";
-import {Margins} from "./Margins.tsx";
-import {Corners} from "./Corners.tsx";
-import {Dimensions} from "./Dimensions.tsx";
-import {Positions} from "./Positions.tsx";
-import {Zindex} from "./Zindex.tsx";
-import {Float} from "./Float.tsx";
-import {GridLayout} from "./GridLayout.tsx";
-import {Flex} from "./Flex.tsx";
+import { ForegroundColors } from "./ForegroundColors.tsx";
+import { BackgroundColors } from "./BackgroundColors.tsx";
+import { Borders } from "./Borders.tsx";
+import { Padding } from "./Padding.tsx";
+import { Margins } from "./Margins.tsx";
+import { Corners } from "./Corners.tsx";
+import { Dimensions } from "./Dimensions.tsx";
+import { Positions } from "./Positions.tsx";
+import { Zindex } from "./Zindex.tsx";
+import { Float } from "./Float.tsx";
+import { GridLayout } from "./GridLayout.tsx";
+import { Flex } from "./Flex.tsx";
 import ReactIconsSampler from "./ReactIcons.tsx";
 import BootstrapGrids from "./BootstrapGrids.tsx";
 import ScreenSizeLabel from "./ScreenSizeLabel.tsx";
@@ -22,7 +22,7 @@ import BootstrapNavigation from "./BootstrapNavigation.tsx";
 export default function Lab2() {
     return (
         <>
-            <div className= "container">
+            <div className="container">
                 <h2>Lab 2 - Cascading Style Sheets</h2>
                 <h3>Styling with the STYLE attribute</h3>
                 <div id="wd-css-id-selectors">
@@ -43,13 +43,13 @@ export default function Lab2() {
                             places in the document
                             <p className="wd-selector-3">
                                 This paragraph's red background is referenced as
-                                <br/>
-                                .selector-2 .selector3<br/>
-                                meaning the descendant of some ancestor.<br/>
+                                <br />
+                                .selector-2 .selector3<br />
+                                meaning the descendant of some ancestor.<br />
                                 <span className="wd-selector-4">
-                                Whereas this span is a direct child of its parent
-                            </span>
-                                <br/>
+                                    Whereas this span is a direct child of its parent
+                                </span>
+                                <br />
                                 You can combine these relationships to create specific
                                 styles depending on the document structure
                             </p>
@@ -57,15 +57,15 @@ export default function Lab2() {
                     </div>
                 </div>
             </div>
-            <ForegroundColors/><BackgroundColors/>
-            <Borders/> <Padding/>
-            <Margins/> <Corners/> <Dimensions/>
+            <ForegroundColors /><BackgroundColors />
+            <Borders /> <Padding />
+            <Margins /> <Corners /> <Dimensions />
             <Positions />
             <Zindex />
             <Float />
             <GridLayout />
             <Flex />
-            <ReactIconsSampler/>
+            <ReactIconsSampler />
             <BootstrapGrids />
             <ScreenSizeLabel />
             <BootstrapTables />
