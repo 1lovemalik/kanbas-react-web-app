@@ -6,6 +6,9 @@ import BooleanStateVariables from "./BooleanStateVariables.tsx";
 import DateStateVariable from "./DateStateVariable.tsx";
 import ObjectStateVariable from "./ObjectStateVariable.tsx";
 import ArrayStateVariable from "./ArrayStateVariable.tsx";
+import ParentStateComponent from "./ParentStateComponent.tsx";
+import ReduxExamples from "./ReduxExamples";
+import TodoList from "./ReduxExamples/todos/TodoList.tsx";
 
 export default function Lab4() {
     function sayHello() {
@@ -23,6 +26,9 @@ export default function Lab4() {
             <DateStateVariable />
             <ObjectStateVariable />
             <ArrayStateVariable />
+            <ParentStateComponent />
+            <ReduxExamples />
+            <TodoList />
 
         </div>)
 }
