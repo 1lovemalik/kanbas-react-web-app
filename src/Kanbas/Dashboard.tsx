@@ -1,41 +1,181 @@
-import { Link } from "react-router-dom";
-import * as db from "./Database"
+import {Link} from "react-router-dom";
+import {useSelector, useDispatch} from "react-redux";
+import {
+    toggleShowAllCourses,
+    enrollInCourse,
+    unenrollFromCourse,
+} from "./Courses/enrollmentReducer";
 
-export default function Dashboard() {
-    const courses = db.courses;
+export default function Dashboard({
+                                      courses,
+                                      course,
+                                      setCourse,
+                                      addNewCourse,
+                                      deleteCourse,
+                                      updateCourse,
+                                  }: {
+    courses: any[];
+    course: any;
+    setCourse: (course: any) => void;
+    addNewCourse: () => void;
+    deleteCourse: (courseId: string) => void;
+    updateCourse: () => void;
+}) {
+    const {currentUser} = useSelector((state: any) => state.accountReducer);
+    const {enrollments, showAllCourses} = useSelector(
+        (state: any) => state.enrollmentReducer
+    );
+    const dispatch = useDispatch();
+
+    const isStudent = currentUser?.role === "STUDENT";
+
+    const isEnrolled = (courseId: string) => {
+        return enrollments.some(
+            (enrollment: any) =>
+                enrollment.user === currentUser._id &&
+                enrollment.course === courseId
+        );
+    };
+
+    const handleEnrollment = (courseId: string) => {
+        if (isEnrolled(courseId)) {
+            dispatch(
+                unenrollFromCourse({
+                    userId: currentUser._id,
+                    courseId,
+                })
+            );
+        } else {
+            dispatch(
+                enrollInCourse({
+                    userId: currentUser._id,
+                    courseId,
+                })
+            );
+        }
+    };
+
+    const coursesToShow = showAllCourses
+        ? courses
+        : courses.filter((course) => isEnrolled(course._id));
 
     return (
         <div id="wd-dashboard" className="p-4">
-            <h1 id="wd-dashboard-title" className="mb-3">Dashboard</h1>
-            <hr />
+            <h1 id="wd-dashboard-title" className="mb-3">
+                Dashboard
+                {isStudent && (
+                    <button
+                        className="btn btn-primary float-end"
+                        onClick={() => dispatch(toggleShowAllCourses())}
+                    >
+                        {showAllCourses ? "Show Enrolled" : "Show All Courses"}
+                    </button>
+                )}
+            </h1>
+            <hr/>
+            {!isStudent && (
+                <>
+                    <h5>
+                        New Course
+                        <button
+                            className="btn btn-primary float-end"
+                            id="wd-add-new-course-click"
+                            onClick={addNewCourse}
+                        >
+                            Add
+                        </button>
+                        <button
+                            className="btn btn-warning float-end me-2"
+                            onClick={updateCourse}
+                            id="wd-update-course-click"
+                        >
+                            Update
+                        </button>
+                    </h5>
+                    <input
+                        value={course.name}
+                        className="form-control mb-2"
+                        onChange={(e) => setCourse({...course, name: e.target.value})}
+                    />
+                    <textarea
+                        value={course.description}
+                        className="form-control"
+                        onChange={(e) =>
+                            setCourse({...course, description: e.target.value})
+                        }
+                    />
+                </>
+            )}
             <h2 id="wd-dashboard-published" className="mb-4">
-                Published Courses ({courses.length})
+                {showAllCourses ? "All Courses" : "My Courses"} ({coursesToShow.length})
             </h2>
-            <hr />
+            <hr/>
             <div id="wd-dashboard-courses" className="row row-cols-1 row-cols-md-5 g-4">
-                {courses.map((course) => (
-                    <div key={course._id} className="wd-dashboard-course col" style={{ width: "300px" }}>
+                {coursesToShow.map((course) => (
+                    <div
+                        key={course._id}
+                        className="wd-dashboard-course col"
+                        style={{width: "300px"}}
+                    >
                         <div className="card rounded-3 overflow-hidden h-100">
                             <Link
                                 to={`/Kanbas/Courses/${course._id}/Home`}
                                 className="wd-dashboard-course-link text-decoration-none text-dark"
                             >
                                 <img
-                                    src={course.image}
+                                    src={course.image || "default.jpg"}
                                     alt={course.name}
-                                    width="100%"
-                                    height={160}
+                                    className="card-img-top"
+                                    style={{height: "150px", objectFit: "cover"}}
                                 />
                                 <div className="card-body">
                                     <h5 className="wd-dashboard-course-title card-title">
                                         {course.name}
                                     </h5>
-                                    <p className="wd-dashboard-course-title card-text overflow-hidden">
+                                    <p className="card-text overflow-hidden">
                                         {course.description}
                                     </p>
-                                    <button className="btn btn-primary">Go</button>
                                 </div>
                             </Link>
+                            <div className="card-footer">
+                                {isStudent ? (
+                                    <>
+                                        <button
+                                            onClick={() => handleEnrollment(course._id)}
+                                            className={`btn ${
+                                                isEnrolled(course._id)
+                                                    ? "btn-danger"
+                                                    : "btn-success"
+                                            }`}
+                                        >
+                                            {isEnrolled(course._id) ? "Unenroll" : "Enroll"}
+                                        </button>
+                                        {isEnrolled(course._id) && (
+                                            <Link
+                                                to={`/Kanbas/Courses/${course._id}/Home`}
+                                                className="btn btn-primary ms-2"
+                                            >
+                                                Go to Course
+                                            </Link>
+                                        )}
+                                    </>
+                                ) : (
+                                    <>
+                                        <button
+                                            onClick={() => setCourse(course)}
+                                            className="btn btn-warning float-end ms-2"
+                                        >
+                                            Edit
+                                        </button>
+                                        <button
+                                            onClick={() => deleteCourse(course._id)}
+                                            className="btn btn-danger float-end"
+                                        >
+                                            Delete
+                                        </button>
+                                    </>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}

@@ -1,20 +1,23 @@
-import { Routes } from "react-router";
-import Lab from "./Labs"
-import { HashRouter, Route, Navigate } from "react-router-dom";
-import Kanbas from "./Kanbas/"
+import {Navigate, HashRouter, Route, Routes} from "react-router-dom";
+import Labs from "./Labs";
+import Kanbas from "./Kanbas";
+import store from "./Kanbas/store";
+import {Provider} from "react-redux";
 
-export function App() {
-  return (
-    <HashRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Navigate to="Kanbas" />} />
-          <Route path="/Labs/*" element={<Lab />} />
-          <Route path="/Kanbas/*" element={<Kanbas />} />
-        </Routes>
-      </div>
-    </HashRouter>
-  );
+function App() {
+    return (
+        <HashRouter>
+            <Provider store={store}>
+                <div>
+                    <Routes>
+                        <Route path="/" element={<Navigate to="/Labs"/>}/>
+                        <Route path="/Kanbas/*" element={<Kanbas/>}/>
+                        <Route path="/Labs/*" element={<Labs/>}/>
+                    </Routes>
+                </div>
+            </Provider>
+        </HashRouter>
+    );
 }
 
 export default App;
