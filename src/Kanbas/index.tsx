@@ -1,5 +1,5 @@
-import {Navigate, Route, Routes} from "react-router";
-import {useState} from "react";
+import { Navigate, Route, Routes } from "react-router";
+import { useState } from "react";
 import Account from "./Account";
 import Courses from "./Courses";
 import Dashboard from "./Dashboard";
@@ -7,11 +7,11 @@ import KanbasNavigation from "./Navigation";
 import * as db from "./Database";
 import "./styles.css";
 import ProtectedRoute from "./Account/ProtectedRoute";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import CourseProtectedRoute from "./Courses/CourseProtectedRoute";
 
 export default function Kanbas() {
-    const {currentUser} = useSelector((state: any) => state.accountReducer);
+    const { currentUser } = useSelector((state: any) => state.accountReducer);
     const isFaculty = currentUser?.role === "FACULTY";
     const [courses, setCourses] = useState<any[]>(db.courses);
     const [course, setCourse] = useState<any>({
@@ -50,11 +50,11 @@ export default function Kanbas() {
 
     return (
         <div id="wd-kanbas">
-            <KanbasNavigation/>
+            <KanbasNavigation />
             <div className="wd-main-content-offset p-3">
                 <Routes>
-                    <Route path="/" element={<Navigate to="Dashboard"/>}/>
-                    <Route path="/Account/*" element={<Account/>}/>
+                    <Route path="/" element={<Navigate to="Dashboard" />} />
+                    <Route path="/Account/*" element={<Account />} />
                     <Route path="/Dashboard" element={
                         <ProtectedRoute>
                             <Dashboard
@@ -69,14 +69,14 @@ export default function Kanbas() {
                                 }}
                             />
                         </ProtectedRoute>
-                    }/>
+                    } />
                     <Route path="/Courses/:cid/*" element={
                         <CourseProtectedRoute>
-                            <Courses courses={courses}/>
+                            <Courses courses={courses} />
                         </CourseProtectedRoute>
-                    }/>
-                    <Route path="/Calendar" element={<h1>Calendar</h1>}/>
-                    <Route path="/Inbox" element={<h1>Inbox</h1>}/>
+                    } />
+                    <Route path="/Calendar" element={<h1>Calendar</h1>} />
+                    <Route path="/Inbox" element={<h1>Inbox</h1>} />
                 </Routes>
             </div>
         </div>
